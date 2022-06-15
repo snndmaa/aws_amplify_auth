@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-elinkshielduserauth-dev-20936-authRole",
+      "UnauthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-dev-20936-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-dev-20936-authRole",
+      "Region": "eu-west-2",
+      "DeploymentBucketName": "amplify-elinkshielduserauth-dev-20936-deployment",
+      "UnauthRoleName": "amplify-elinkshielduserauth-dev-20936-unauthRole",
+      "StackName": "amplify-elinkshielduserauth-dev-20936",
+      "StackId": "arn:aws:cloudformation:eu-west-2:964656100752:stack/amplify-elinkshielduserauth-dev-20936/aa686de0-eb7e-11ec-a0c1-02985c270ede",
+      "AmplifyAppId": "d27blqhcut4owf"
+    },
+    "categories": {
+      "auth": {
+        "elinkshielduserauth5f69e489": {}
+      }
+    }
+  }
+}

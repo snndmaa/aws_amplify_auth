@@ -1,8 +1,6 @@
-/* eslint-disable default-case */
 import React, { useEffect, useState } from 'react';
 import Amplify, { Auth, Hub } from 'aws-amplify';
 import awsconfig from './aws-exports';
-import './App.css'
 
 Amplify.configure(awsconfig);
 
@@ -11,6 +9,7 @@ function App() {
 
   useEffect(() => {
     Hub.listen('auth', ({ payload: { event, data } }) => {
+      // eslint-disable-next-line default-case
       switch (event) {
         case 'signIn':
         case 'cognitoHostedUI':
@@ -41,7 +40,7 @@ function App() {
       {user ? (
         <button onClick={() => Auth.signOut()}>Sign Out</button>
       ) : (
-        <button onClick={() => Auth.federatedSignIn()}>Sign On</button>
+        <button onClick={() => Auth.federatedSignIn()}>Federated Sign In</button>
       )}
     </div>
   );

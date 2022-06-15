@@ -1,12 +1,11 @@
 /* eslint-disable default-case */
 import React, { useEffect, useState } from 'react';
-import Amplify, { Auth, Hub } from 'aws-amplify';
+import { Auth, Hub } from 'aws-amplify';
 import awsconfig from './aws-exports';
-import './App.css'
 
-Amplify.configure(awsconfig);
+Auth.configure(awsconfig);
 
-function App() {
+function Dashboard() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -41,10 +40,10 @@ function App() {
       {user ? (
         <button onClick={() => Auth.signOut()}>Sign Out</button>
       ) : (
-        <button onClick={() => Auth.federatedSignIn()}>Sign On</button>
+        <button onClick={() => Auth.federatedSignIn()}>Federated Sign In</button>
       )}
     </div>
   );
 }
 
-export default App;
+export default Dashboard;
