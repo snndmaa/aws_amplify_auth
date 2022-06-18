@@ -1,8 +1,14 @@
 /* eslint-disable default-case */
-import React, { useEffect, useState } from 'react';
-import Amplify, { Auth, Hub } from 'aws-amplify';
+import React, {
+  useState,
+  useEffect,
+} from 'react';
+import './App.css';
+import './Custom.css';
+import 'antd/dist/antd.css';
+import Router from './router/routes';
 import awsconfig from './aws-exports';
-import './App.css'
+import Amplify, { Auth, Hub } from 'aws-amplify';
 
 Amplify.configure(awsconfig);
 
@@ -36,14 +42,20 @@ function App() {
   }
 
   return (
-    <div>
-      <p>User: {user ? JSON.stringify(user.attributes) : 'None'}</p>
-      {user ? (
-        <button onClick={() => Auth.signOut()}>Sign Out</button>
-      ) : (
-        <button onClick={() => Auth.federatedSignIn()}>Sign On</button>
-      )}
-    </div>
+    // <div>
+    //   <p>User: {user ? JSON.stringify(user.attributes) : 'None'}</p>
+    //   {user ? (
+    //     <button onClick={() => Auth.signOut()}>Sign Out</button>
+    //   ) : (
+    //     <>
+    //     <button onClick={() => Auth.federatedSignIn({ provider: 'Facebook' })}>Sign On - Facebook</button>
+    //     <button onClick={() => Auth.federatedSignIn({ provider: 'Google' })}>Sign On - Google</button>
+    //     </>
+    //   )}
+    // </div>
+    <>
+    <Router />
+    </>
   );
 }
 

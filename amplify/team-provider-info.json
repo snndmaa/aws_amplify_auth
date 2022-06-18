@@ -16,5 +16,18 @@
         "elinkshielduserauth5f69e489": {}
       }
     }
+  },
+  "awsenv": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-elinkshielduserauth-awsenv-160606-authRole",
+      "UnauthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-awsenv-160606-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-awsenv-160606-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-elinkshielduserauth-awsenv-160606-deployment",
+      "UnauthRoleName": "amplify-elinkshielduserauth-awsenv-160606-unauthRole",
+      "StackName": "amplify-elinkshielduserauth-awsenv-160606",
+      "StackId": "arn:aws:cloudformation:us-east-1:964656100752:stack/amplify-elinkshielduserauth-awsenv-160606/db354f20-ed85-11ec-98d2-0ebf90e6d2c5",
+      "AmplifyAppId": "d3giz766boym8a"
+    }
   }
 }

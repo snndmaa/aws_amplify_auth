@@ -1,38 +1,165 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+.auth-body {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  background-color: #e5e5e5;
+}
+
+.auth-header {
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  color: #264ECA;
+}
+
+.auth-sub-header {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 48px;
   text-align: center;
+  color: #274fc7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.auth-card {
+  /* width: 500px; */
+  /* position: relative; */
+  padding: 3rem;
+  border-radius: 5px;
+  /* height: max-content; */
+  background: #f2f2f7;
+  box-shadow: 0px 33px 43px rgba(0, 0, 0, 0.1),
+    0px 9.94853px 12.9632px rgba(0, 0, 0, 0.0651589),
+    0px 4.13211px 5.38427px rgba(0, 0, 0, 0.05),
+    0px 1.4945px 1.94738px rgba(0, 0, 0, 0.0348411);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.forget {
+  margin-top: calc(100vh - 70rem);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.account {
+  margin-top: calc(100vh - 50rem);
+}
+
+.signin {
+  margin-top: calc(100vh - 55rem);
+}
+
+.text-pass {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  color: #274fc7;
+}
+
+.stroke {
+  margin-bottom: 2rem;
+  width: 322px;
+  flex: 1;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  border: 1px solid #c4c4c4;
 }
 
-.App-link {
-  color: #61dafb;
+.sju32js2 {
+  width: 100%;
+  color: #fff;
+  cursor: pointer;
+  height: 46.25px;
+  padding-left: 3vw;
+  padding-right: 5vw;
+  padding-top: 0.3rem;
+  box-shadow: 0px 33px 43px rgba(0, 0, 0, 0.1),
+    0px 9.94853px 12.9632px rgba(0, 0, 0, 0.0651589),
+    0px 4.13211px 5.38427px rgba(0, 0, 0, 0.05),
+    0px 1.4945px 1.94738px rgba(0, 0, 0, 0.0348411);
+  background-color: #264ECA;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sju32js1 {
+  width: 100%;
+  color: rgb(104, 94, 94);
+  cursor: pointer;
+  height: 46.25px;
+  padding-left: 3vw;
+  padding-right: 5vw;
+  padding-top: 0.3rem;
+}
+
+.sju32js2 p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sp90loi8 {
+  background-color: #e5e5e5;
+  /* height: 100%; */
+}
+
+.sub903 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  margin-top: -1rem;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #666666;
+}
+
+.order-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+  color: #666666;
+}
+
+.green-text {
+  color: green !important;
+}
+
+.red-text {
+  color: red !important;
+}
+
+.elink-bg-blue {
+  background-color: #264eca !important;
+}
+
+.elink-bg-red {
+  background-color: rgb(195, 6, 6) !important;
+}
+
+.elink-white {
+  color: #fff !important;
+}
+
+.elink-rounded-sm {
+  border-radius: 0.5rem !important;
+}
+
+.subscription-confirmation {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: -0.011em;
+  color: #000000;
+}
+
+.elink-mt-3 {
+  margin-top: 2rem !important;
 }
