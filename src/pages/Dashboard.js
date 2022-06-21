@@ -1,11 +1,25 @@
 import { Button } from "antd";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import SharedModal from "../components/Modals/SharedModal";
 import Card from "../components/shared/Card";
+import { Auth } from 'aws-amplify';
+import { Authenticator } from "@aws-amplify/ui-react";
 
 const Dashboard = () => {
+  const [userInfo, setUserInfo] = useState('')
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    Auth.currentUserInfo()
+    .then(data => setUserInfo(data))
+    .then(data => {
+      if (data === null){
+        return navigate('/signin')
+      }
+    })
+  }, [userInfo, navigate])
+
   const [visibble, setVisible] = useState(false);
   const [link, setLink] = useState("");
   const [products] = useState([
@@ -57,7 +71,7 @@ const Dashboard = () => {
       >
         <p className="subscription-confirmation mt-2 mb-5">
           By clicking confirm, you've agreed to our terms and policy as stated{" "}
-          <a>here</a>
+          <a href="/">here</a>
         </p>
 
         <div className="flex items-center justify-center mt-3">
@@ -79,7 +93,7 @@ const Dashboard = () => {
           </div>
         </div>
       </SharedModal>
-      <p className="text-2xl font-bold">Hi, Ebenezer</p>
+      <p className="text-2xl font-bold">Hi, { userInfo.username }</p>
       <p className="text-lg mt-5">List of available products</p>
 
       <div className="grid grid-cols-3 gap-3">
@@ -101,6 +115,12 @@ const Dashboard = () => {
           </Card>
         ))}
       </div>
+
+      <div>
+        <Authenticator>
+          {({ signOut }) => <button onClick={signOut}>Sign out</button>}
+        </Authenticator>
+    </div>
     </div>
   );
 };

@@ -32,7 +32,7 @@ function App() {
       }
     });
 
-    getUser().then(userData => setUser(userData));
+    // getUser().then(userData => setUser(userData));
   }, []);
 
   function getUser() {
