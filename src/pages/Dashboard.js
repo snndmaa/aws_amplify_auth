@@ -16,6 +16,7 @@ const useStore = create((set) => ({
   fetchUser: async authReq =>{
     // set((state) => ({ loading: true }))
     const response = await Auth.currentUserInfo()
+    console.log(response)
     set((state) => ({ userObject: response }))
   } 
 }))
@@ -34,12 +35,14 @@ const subpost = (obj) => {
 const Dashboard = () => {
   const navigate = useNavigate();
 
-
   const {userObject, loading, fetchUser} = useStore()
   useEffect(()=>{
-    (async() => await fetchUser())()
+    (async() => await fetchUser())();
 
-    }, [userObject, userObject.username, fetchUser])
+
+    }, [userObject.username, fetchUser])
+
+
 
   const [visibble, setVisible] = useState(false);
   const [link, setLink] = useState("");
