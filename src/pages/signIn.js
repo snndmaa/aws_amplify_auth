@@ -281,16 +281,6 @@ const formFields = {
 
 export default function App() {
 
-  // const [isAuthenticated, setIsAuthenticated] = useState(true)
-
-  // Auth.currentUserInfo().then(
-  //     data => data === null ? setIsAuthenticated(false) : ''
-  // )
-  // .catch(e =>{
-  //     console.log(e)
-  //     setIsAuthenticated(false)
-  // })
-
   return (
     <Authenticator formFields={formFields} components={components}>
       <Routes>

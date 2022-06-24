@@ -5,20 +5,41 @@ import SharedModal from "../components/Modals/SharedModal";
 import Card from "../components/shared/Card";
 import { Auth } from 'aws-amplify';
 import { Authenticator } from "@aws-amplify/ui-react";
+import create from 'zustand'
+import axios from 'axios'
+import Loader from "../components/shared/loader";
+
+
+const useStore = create((set) => ({
+  userObject: {username: ''},
+  loading: false,
+  fetchUser: async authReq =>{
+    // set((state) => ({ loading: true }))
+    const response = await Auth.currentUserInfo()
+    set((state) => ({ userObject: response }))
+  } 
+}))
+
+const subpost = (obj) => {
+  // console.log('POST?')
+
+  const thing = JSON.stringify(obj)
+  axios
+  .post(`http://localhost:8000/user/${obj.username}/subscribe`, {
+    userObject: thing
+  })
+  console.log('POSTED!!!')
+}
 
 const Dashboard = () => {
-  const [userInfo, setUserInfo] = useState('')
   const navigate = useNavigate();
 
+
+  const {userObject, loading, fetchUser} = useStore()
   useEffect(()=>{
-    Auth.currentUserInfo()
-    .then(data => setUserInfo(data))
-    .then(data => {
-      if (data === null){
-        return navigate('/signin')
-      }
-    })
-  }, [userInfo, navigate])
+    (async() => await fetchUser())()
+
+    }, [userObject, userObject.username, fetchUser])
 
   const [visibble, setVisible] = useState(false);
   const [link, setLink] = useState("");
@@ -60,7 +81,7 @@ const Dashboard = () => {
       description: "A p2p fiat currency platform, just at your finger tips",
     },
   ]);
-  return (
+  return loading ? <Loader/> : (
     <div>
       <SharedModal
         visibble={visibble}
@@ -89,11 +110,11 @@ const Dashboard = () => {
           <div className="ml-5">
             <Button
             className="elink-bg-blue elink-white elink-rounded-sm"
-            onClick={() => navigate(link)}>Continue</Button>
+            onClick={() => subpost(userObject)}>Continue</Button>
           </div>
         </div>
       </SharedModal>
-      <p className="text-2xl font-bold">Hi, { userInfo.username }</p>
+      <p className="text-2xl font-bold">Hi, { userObject.username ? userObject.username : '' }</p>
       <p className="text-lg mt-5">List of available products</p>
 
       <div className="grid grid-cols-3 gap-3">
@@ -118,7 +139,11 @@ const Dashboard = () => {
 
       <div>
         <Authenticator>
-          {({ signOut }) => <button onClick={signOut}>Sign out</button>}
+          {({ signOut }) => {
+            if(userObject === null){ return navigate('/signin') }
+            return <button onClick={signOut}>Sign out</button>}
+            
+          }
         </Authenticator>
     </div>
     </div>
