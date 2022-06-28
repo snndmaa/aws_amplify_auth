@@ -3,33 +3,22 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import SharedModal from "../components/Modals/SharedModal";
 import Card from "../components/shared/Card";
-import { Auth } from 'aws-amplify';
 import { Authenticator } from "@aws-amplify/ui-react";
-import create from 'zustand'
 import axios from 'axios'
 import Loader from "../components/shared/loader";
+import useStore from '../context/userState.js'
 
 
-const useStore = create((set) => ({
-  userObject: {username: ''},
-  loading: false,
-  fetchUser: async authReq =>{
-    // set((state) => ({ loading: true }))
-    const response = await Auth.currentUserInfo()
-    console.log(response)
-    set((state) => ({ userObject: response }))
-  } 
-}))
+
 
 const subpost = (obj) => {
-  // console.log('POST?')
 
   const thing = JSON.stringify(obj)
   axios
-  .post(`http://localhost:8000/user/${obj.username}/subscribe`, {
+  .post(`http://www.elinkshield.com:4000/user/${obj.username}/subscribe`, {
     userObject: thing
   })
-  console.log('POSTED!!!')
+  .catch(e=>console.log(e))
 }
 
 const Dashboard = () => {
@@ -39,8 +28,14 @@ const Dashboard = () => {
   useEffect(()=>{
     (async() => await fetchUser())();
 
+    // (async() => {
+    //   if (userObject !== null && userObject !== ''){
+    //     const response = await Auth.currentAuthenticatedUser();  //Total Info
+    //     return console.log(response)
+    //   }
+    // })()
 
-    }, [userObject.username, fetchUser])
+    }, [userObject.username])
 
 
 
@@ -144,7 +139,8 @@ const Dashboard = () => {
         <Authenticator>
           {({ signOut }) => {
             if(userObject === null){ return navigate('/signin') }
-            return <button onClick={signOut}>Sign out</button>}
+            // window.location.reload(false) 
+            return <button onClick={signOut}>Sign Out</button>}
             
           }
         </Authenticator>

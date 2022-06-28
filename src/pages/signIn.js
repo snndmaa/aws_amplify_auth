@@ -280,7 +280,6 @@ const formFields = {
 };
 
 export default function App() {
-
   return (
     <Authenticator formFields={formFields} components={components}>
       <Routes>
