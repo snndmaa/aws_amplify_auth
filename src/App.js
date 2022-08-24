@@ -10,6 +10,12 @@ import Router from './router/routes';
 import awsconfig from './aws-exports';
 import Amplify, { Auth, Hub } from 'aws-amplify';
 
+import { 
+
+  Footer
+
+} from './ui-components';
+
 Amplify.configure(awsconfig);
 
 function App() {
@@ -55,6 +61,7 @@ function App() {
     // </div>
     <>
     <Router />
+    <Footer />
     </>
   );
 }

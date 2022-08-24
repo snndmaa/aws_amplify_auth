@@ -1,33 +1,21 @@
 {
-  "dev": {
+  "sampledev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-elinkshielduserauth-dev-20936-authRole",
-      "UnauthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-dev-20936-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-dev-20936-authRole",
-      "Region": "eu-west-2",
-      "DeploymentBucketName": "amplify-elinkshielduserauth-dev-20936-deployment",
-      "UnauthRoleName": "amplify-elinkshielduserauth-dev-20936-unauthRole",
-      "StackName": "amplify-elinkshielduserauth-dev-20936",
-      "StackId": "arn:aws:cloudformation:eu-west-2:964656100752:stack/amplify-elinkshielduserauth-dev-20936/aa686de0-eb7e-11ec-a0c1-02985c270ede",
-      "AmplifyAppId": "d27blqhcut4owf"
+      "AuthRoleName": "amplify-elinkshielduserauth-sampledev-90844-authRole",
+      "UnauthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-sampledev-90844-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-sampledev-90844-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-elinkshielduserauth-sampledev-90844-deployment",
+      "UnauthRoleName": "amplify-elinkshielduserauth-sampledev-90844-unauthRole",
+      "StackName": "amplify-elinkshielduserauth-sampledev-90844",
+      "StackId": "arn:aws:cloudformation:us-east-1:964656100752:stack/amplify-elinkshielduserauth-sampledev-90844/b9014730-22e4-11ed-a0be-0efe067de405",
+      "AmplifyAppId": "d2l1of27oygszj"
     },
     "categories": {
       "auth": {
-        "elinkshielduserauth5f69e489": {}
+        "elinkshielduserauth5f69e489": {},
+        "elinkshielduserauth": {}
       }
-    }
-  },
-  "awsenv": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-elinkshielduserauth-awsenv-160606-authRole",
-      "UnauthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-awsenv-160606-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::964656100752:role/amplify-elinkshielduserauth-awsenv-160606-authRole",
-      "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-elinkshielduserauth-awsenv-160606-deployment",
-      "UnauthRoleName": "amplify-elinkshielduserauth-awsenv-160606-unauthRole",
-      "StackName": "amplify-elinkshielduserauth-awsenv-160606",
-      "StackId": "arn:aws:cloudformation:us-east-1:964656100752:stack/amplify-elinkshielduserauth-awsenv-160606/db354f20-ed85-11ec-98d2-0ebf90e6d2c5",
-      "AmplifyAppId": "d3giz766boym8a"
     }
   }
 }
