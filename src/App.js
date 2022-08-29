@@ -47,21 +47,12 @@ function App() {
       .catch(() => console.log('Not signed in'));
   }
 
+    
   return (
-    // <div>
-    //   <p>User: {user ? JSON.stringify(user.attributes) : 'None'}</p>
-    //   {user ? (
-    //     <button onClick={() => Auth.signOut()}>Sign Out</button>
-    //   ) : (
-    //     <>
-    //     <button onClick={() => Auth.federatedSignIn({ provider: 'Facebook' })}>Sign On - Facebook</button>
-    //     <button onClick={() => Auth.federatedSignIn({ provider: 'Google' })}>Sign On - Google</button>
-    //     </>
-    //   )}
-    // </div>
+
     <>
-    <Router />
-    <Footer />
+      <Router />
+      <Footer />
     </>
   );
 }

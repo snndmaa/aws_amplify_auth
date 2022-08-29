@@ -15,6 +15,8 @@ import {
   TextField,
   View,
 } from "@aws-amplify/ui-react";
+import BtnGoogle from "./BtnGoogle";
+import BtnFacebook from "./BtnFacebook";
 export default function DesktopLogin(props) {
   const { overrides, ...rest } = props;
   return (
@@ -159,7 +161,7 @@ export default function DesktopLogin(props) {
         padding="8px 9px 8px 9px"
         {...getOverrideProps(overrides, "Frame 419")}
       >
-        <Button
+        <BtnGoogle
           display="flex"
           gap="0"
           width="189px"
@@ -172,9 +174,9 @@ export default function DesktopLogin(props) {
           borderRadius="24px"
           padding="7px 15px 7px 15px"
           backgroundColor="rgba(255,255,255,1)"
-          {...getOverrideProps(overrides, "Button31642604")}
-        ></Button>
-        <Button
+          {...getOverrideProps(overrides, "BtnGoogle")}
+        ></BtnGoogle>
+        <BtnFacebook
           display="flex"
           gap="0"
           width="189px"
@@ -187,8 +189,8 @@ export default function DesktopLogin(props) {
           borderRadius="24px"
           padding="7px 15px 7px 15px"
           backgroundColor="rgba(255,255,255,1)"
-          {...getOverrideProps(overrides, "Button31642605")}
-        ></Button>
+          {...getOverrideProps(overrides, "BtnFacebook")}
+        ></BtnFacebook>
       </Flex>
     </View>
   );

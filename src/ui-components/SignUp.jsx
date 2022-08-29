@@ -14,6 +14,8 @@ import {
   Text,
   TextField,
 } from "@aws-amplify/ui-react";
+import BtnGoogle from "./BtnGoogle";
+import BtnFacebook from "./BtnFacebook";
 export default function SignUp(props) {
   const { overrides, ...rest } = props;
   return (
@@ -195,7 +197,7 @@ export default function SignUp(props) {
         padding="8px 9px 8px 9px"
         {...getOverrideProps(overrides, "Frame 419")}
       >
-        <Button
+        <BtnGoogle
           display="flex"
           gap="0"
           width="189px"
@@ -209,8 +211,8 @@ export default function SignUp(props) {
           padding="7px 15px 7px 15px"
           backgroundColor="rgba(255,255,255,1)"
           {...getOverrideProps(overrides, "Btn31642587")}
-        ></Button>
-        <Button
+        ></BtnGoogle>
+        <BtnFacebook
           display="flex"
           gap="0"
           width="189px"
@@ -224,7 +226,7 @@ export default function SignUp(props) {
           padding="7px 15px 7px 15px"
           backgroundColor="rgba(255,255,255,1)"
           {...getOverrideProps(overrides, "Btn31642588")}
-        ></Button>
+        ></BtnFacebook>
       </Flex>
     </Flex>
   );
