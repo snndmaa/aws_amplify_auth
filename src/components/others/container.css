@@ -1,0 +1,29 @@
+.container{
+    /* border: 1px solid red; */
+    width: 100vw;
+    height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerHead{
+    border: 0.5px solid blue;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.containerBody{
+    /* border: 1px solid yellowgreen; */
+    display: flex;
+
+}
+
+.containerBodySidebar{
+    width: fit-content;
+    height: 100%;
+}
+
+.containerFooter{
+    
+}

@@ -8,7 +8,7 @@
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Text, View } from "@aws-amplify/ui-react";
-export default function EmailVerificationsuccessful(props) {
+export default function EmailVerificationSuccessful(props) {
   const { overrides, ...rest } = props;
   return (
     <Flex
@@ -18,7 +18,7 @@ export default function EmailVerificationsuccessful(props) {
       position="relative"
       padding="0px 0px 0px 0px"
       {...rest}
-      {...getOverrideProps(overrides, "EmailVerificationsuccessful")}
+      {...getOverrideProps(overrides, "EmailVerificationSuccessful")}
     >
       <View
         width="1440px"

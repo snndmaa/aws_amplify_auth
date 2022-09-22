@@ -7,7 +7,9 @@ const useStore = create((set) => ({
     loading: false,
     fetchUser: async authReq =>{
       // set((state) => ({ loading: true }))
-      let response = await Auth.currentUserInfo()
+      // let response = await Auth.currentUserInfo()
+      const user = await Auth.currentAuthenticatedUser()
+      let response = await Auth.userAttributes(user)
       // if(response == null){
       //   response = ''
       // }

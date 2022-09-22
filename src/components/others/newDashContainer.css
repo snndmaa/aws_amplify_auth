@@ -1,0 +1,26 @@
+.outerContainer{
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+}
+.innercontainer{
+    display: flex;
+    border: 1px solid red;
+    width: 100vw;
+    height: max-content;
+    min-width: 100vw;
+    flex-direction: row;
+}
+
+.containerSidebar{
+    border: 1px solid green;
+    width: fit-content;
+    height: fit-content;
+}
+
+.containerCombo{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+

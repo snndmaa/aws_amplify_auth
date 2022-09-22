@@ -7,7 +7,7 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type DashboardCasOutProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type DashboardListOfferProps = React.PropsWithChildren<Partial<FlexProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function DashboardCasOut(props: DashboardCasOutProps): React.ReactElement;
+export default function DashboardListOffer(props: DashboardListOfferProps): React.ReactElement;

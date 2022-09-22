@@ -1,0 +1,28 @@
+type Useraccess @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  user_id: ID
+  login: String
+  failed_attempts: String
+  password_changed_dt: AWSDate
+  role: String
+  require_password_change: String
+  password: String
+  login_status: String
+  user_status: String
+  expiry_dt: AWSDate
+  password_hint: String
+  logical_delete: String
+  dt_update_last: AWSDate
+  received_contract: String
+  event_flg: String
+}
+
+type User @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  DateCreated: AWSTimestamp
+  Username: String
+  Password: String
+  Email: String
+  Phone: AWSPhone
+}
+ 

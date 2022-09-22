@@ -7,7 +7,7 @@
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { FlexProps } from "@aws-amplify/ui-react";
-export declare type EmailVerificationsuccessfulProps = React.PropsWithChildren<Partial<FlexProps> & {
+export declare type EmailVerificationSuccessfulProps = React.PropsWithChildren<Partial<FlexProps> & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function EmailVerificationsuccessful(props: EmailVerificationsuccessfulProps): React.ReactElement;
+export default function EmailVerificationSuccessful(props: EmailVerificationSuccessfulProps): React.ReactElement;

@@ -11,8 +11,19 @@ import ProtectedRoute from "./ProtectedRoute";
 import Login from "../pages/login";
 import CreateAccount from "../pages/CreateAccount";
 import ForgetPassword from "../pages/ForgetPassword";
+import NewDash from "../pages/NewDash"
 import SignIn from "../pages/signIn";
+import Demo from "../pages/Demo";
+import LinkFunds from "../pages/LinkFunds";
+import Deposit from "../pages/Deposit";
+import Withdraw from "../pages/Withdraw";
 import { Auth} from 'aws-amplify';
+import ListOffer from "../pages/ListOffer";
+import Activity from "../pages/Activity";
+import Portfolio from "../pages/Portfolio";
+import History from "../pages/History";
+import Profile from "../pages/Profile";
+import Settings from "../pages/Settings";
 
 
 // const Loading = () => <LoadingScreen />;
@@ -51,7 +62,107 @@ const Router = () => {
             element={
               <ProtectedRoute
                 // isAuthenticated={isAuthenticated}
-                component={Dashboard}
+                component={NewDash}
+              />
+            }
+          />
+
+          <Route
+            path="/zzz"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={Demo}
+              />
+            }
+          />
+
+          <Route
+            path="/linkfund"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={LinkFunds}
+              />
+            }
+          />
+
+          <Route
+            path="/deposit"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={Deposit}
+              />
+            }
+          />
+
+          <Route
+            path="/withdraw"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={Withdraw}
+              />
+            }
+          />
+
+          <Route
+            path="/listoffer"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={ListOffer}
+              />
+            }
+          />
+
+          <Route
+            path="/activity"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={Activity}
+              />
+            }
+          />
+
+          <Route
+            path="/portfolio"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={Portfolio}
+              />
+            }
+          />
+
+          <Route
+            path="/history"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={History}
+              />
+            }
+          />
+
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={Profile}
+              />
+            }
+          />
+
+          <Route
+            path="/settings"
+            element={
+              <ProtectedRoute
+                // isAuthenticated={isAuthenticated}
+                component={Settings}
               />
             }
           />

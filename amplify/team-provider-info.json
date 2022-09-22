@@ -14,7 +14,8 @@
     "categories": {
       "auth": {
         "elinkshielduserauth5f69e489": {},
-        "elinkshielduserauth": {}
+        "elinkshielduserauth": {},
+        "userauth": {}
       }
     }
   }

@@ -24,7 +24,6 @@ export default function VerifyEmail(props) {
         gap="24px"
         direction="column"
         width="384px"
-        height="538.54px"
         justifyContent="flex-end"
         alignItems="center"
         shrink="0"
@@ -39,8 +38,7 @@ export default function VerifyEmail(props) {
           height="376.54px"
           justifyContent="center"
           alignItems="center"
-          grow="1"
-          basis="376.544189453125px"
+          shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
           {...getOverrideProps(overrides, "illustration")}

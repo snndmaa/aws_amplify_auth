@@ -34,19 +34,9 @@ const ProtectedRoute = (props) => {
 
     if(isAuthenticated) {
         return (
-            <>
-            <div className="grid grid-cols-5 gap-5">
-           <Sidebar />
-         <div className="col-span-4 pr-10 pl-10">
-            <div className="mt-20">
-            <Navbar />
-            <div>
+
             <Component />
-            </div>
-            </div>
-         </div>
-         </div>
-            </>
+
         )
     }
 

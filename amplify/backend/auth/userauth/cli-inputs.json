@@ -3,8 +3,8 @@
   "cognitoConfig": {
     "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "elinks628322f5",
-    "userPoolName": "elinkshielduserauth",
+    "resourceNameTruncated": "userau6cc49134",
+    "userPoolName": "userauth",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -24,16 +24,19 @@
       "Requires Symbols",
       "Requires Uppercase"
     ],
-    "requiredAttributes": [],
+    "requiredAttributes": [
+      "given_name",
+      "family_name"
+    ],
     "aliasAttributes": [],
     "userpoolClientGenerateSecret": false,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "elinks628322f5_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "userau6cc49134_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "628322f5",
-    "resourceName": "elinkshielduserauth",
+    "sharedId": "6cc49134",
+    "resourceName": "userauth",
     "authSelections": "identityPoolAndUserPool",
     "serviceName": "Cognito",
     "usernameAttributes": [
@@ -45,6 +48,14 @@
     "adminQueries": false,
     "thirdPartyAuth": false,
     "authProviders": [],
+    "hostedUI": true,
+    "hostedUIDomainName": "x1j9y99pfcgg",
+    "authProvidersUserPool": [
+      "Facebook",
+      "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"public_profile\",\"AttributeMapping\":{\"given_name\":\"first_name\",\"family_name\":\"last_name\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid profile\",\"AttributeMapping\":{\"given_name\":\"given_name\",\"family_name\":\"family_name\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000\"],\"LogoutURLs\":[\"http://localhost:3000\"]}",
     "usernameCaseSensitive": false,
     "useEnabledMfas": true
   }

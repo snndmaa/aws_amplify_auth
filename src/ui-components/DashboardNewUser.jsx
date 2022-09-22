@@ -6,497 +6,26 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useNavigateAction,
-} from "@aws-amplify/ui-react/internal";
-import { Button, Flex, Icon, Image, Text, View } from "@aws-amplify/ui-react";
+import { getOverrideProps, useAuth } from "@aws-amplify/ui-react/internal";
+import { Flex, Icon, Text, View } from "@aws-amplify/ui-react";
 import SelectFieldCurrency from "./SelectFieldCurrency";
 export default function DashboardNewUser(props) {
   const { overrides, ...rest } = props;
-  const buttonOnClick = useNavigateAction({ type: "url", url: "" });
-  const homeOnClick = useNavigateAction({
-    type: "url",
-    url: "http://localhost:3000",
-  });
-  const cashInOnClick = useNavigateAction({ type: "url", url: "" });
-  const cashInLblOnClick = useNavigateAction({ type: "url", url: "" });
-  const cashOutOnClick = useNavigateAction({ type: "url", url: "" });
-  const cashOutLblOnClick = useNavigateAction({ type: "url", url: "" });
-  const offerOnClick = useNavigateAction({ type: "url", url: "" });
-  const listofferOnClick = useNavigateAction({ type: "url", url: "" });
-  const swapOnClick = useNavigateAction({ type: "url", url: "" });
-  const swapLblOnClick = useNavigateAction({ type: "url", url: "" });
-  const activityOnClick = useNavigateAction({ type: "url", url: "" });
-  const activityLblOnClick = useNavigateAction({ type: "url", url: "" });
-  const portfolioOnClick = useNavigateAction({ type: "url", url: "" });
-  const portfolioLblOnClick = useNavigateAction({ type: "url", url: "" });
-  const historyOnClick = useNavigateAction({ type: "url", url: "" });
-  const historyLblOnClick = useNavigateAction({ type: "url", url: "" });
-  const profileOnClick = useNavigateAction({ type: "url", url: "" });
-  const profileLblOnClick = useNavigateAction({ type: "url", url: "" });
-  const settingsOnClick = useNavigateAction({ type: "url", url: "" });
-  const settingLblOnClick = useNavigateAction({ type: "url", url: "" });
+  const authAttributes = useAuth().user?.attributes ?? {};
   return (
     <Flex
       gap="33px"
+      height="884px"
       alignItems="center"
       position="relative"
-      padding="0px 0px 0px 0px"
+      padding="26px 0px 40px 0px"
       backgroundColor="rgba(241,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "DashboardNewUser")}
     >
       <View
-        width="259px"
-        height="1024px"
-        shrink="0"
-        overflow="hidden"
-        position="relative"
-        padding="0px 0px 0px 0px"
-        backgroundColor="rgba(39,79,199,1)"
-        {...getOverrideProps(overrides, "Sidebar")}
-      >
-        <Button
-          display="flex"
-          gap="0"
-          position="absolute"
-          top="872px"
-          left="52px"
-          width="155px"
-          justifyContent="center"
-          alignItems="center"
-          backgroundColor="rgba(255,114,98,1)"
-          size="default"
-          isDisabled={false}
-          variation="primary"
-          children="Logout"
-          onClick={() => {
-            buttonOnClick();
-          }}
-          {...getOverrideProps(overrides, "Button")}
-        ></Button>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="164px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            homeOnClick();
-          }}
-          {...getOverrideProps(overrides, "Home")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Home"
-            {...getOverrideProps(overrides, "homeLbl")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="224px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            cashInOnClick();
-          }}
-          {...getOverrideProps(overrides, "cashIn")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Cash In"
-            onClick={() => {
-              cashInLblOnClick();
-            }}
-            {...getOverrideProps(overrides, "cashInLbl")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="284px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            cashOutOnClick();
-          }}
-          {...getOverrideProps(overrides, "cashOut")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Cash Out"
-            onClick={() => {
-              cashOutLblOnClick();
-            }}
-            {...getOverrideProps(overrides, "cashOutLbl")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="344px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            offerOnClick();
-          }}
-          {...getOverrideProps(overrides, "offer")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="List Offer"
-            onClick={() => {
-              listofferOnClick();
-            }}
-            {...getOverrideProps(overrides, "Listoffer")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="404px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            swapOnClick();
-          }}
-          {...getOverrideProps(overrides, "swap")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Swap"
-            onClick={() => {
-              swapLblOnClick();
-            }}
-            {...getOverrideProps(overrides, "swapLbl")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="464px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            activityOnClick();
-          }}
-          {...getOverrideProps(overrides, "activity")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Activity"
-            onClick={() => {
-              activityLblOnClick();
-            }}
-            {...getOverrideProps(overrides, "activityLbl")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="524px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            portfolioOnClick();
-          }}
-          {...getOverrideProps(overrides, "portfolio")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Portfolio"
-            onClick={() => {
-              portfolioLblOnClick();
-            }}
-            {...getOverrideProps(overrides, "portfolioLbl")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="584px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            historyOnClick();
-          }}
-          {...getOverrideProps(overrides, "history")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="History"
-            onClick={() => {
-              historyLblOnClick();
-            }}
-            {...getOverrideProps(overrides, "historyLbl")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="644px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            profileOnClick();
-          }}
-          {...getOverrideProps(overrides, "profile")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Profile"
-            onClick={() => {
-              profileLblOnClick();
-            }}
-            {...getOverrideProps(overrides, "profileLbl")}
-          ></Text>
-        </Flex>
-        <Flex
-          gap="10px"
-          position="absolute"
-          top="704px"
-          left="38px"
-          width="182px"
-          height="45px"
-          justifyContent="center"
-          alignItems="center"
-          border="1px SOLID rgba(255,255,255,1)"
-          borderRadius="8px"
-          padding="5px 0px 5px 0px"
-          backgroundColor="rgba(222,246,228,0)"
-          onClick={() => {
-            settingsOnClick();
-          }}
-          {...getOverrideProps(overrides, "settings")}
-        >
-          <Text
-            fontFamily="Poppins"
-            fontSize="16px"
-            fontWeight="700"
-            color="rgba(255,255,255,1)"
-            fontStyle="italic"
-            textTransform="capitalize"
-            lineHeight="16px"
-            textAlign="center"
-            display="flex"
-            direction="column"
-            justifyContent="center"
-            letterSpacing="-0.26px"
-            shrink="0"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Settings"
-            onClick={() => {
-              settingLblOnClick();
-            }}
-            {...getOverrideProps(overrides, "settingLbl")}
-          ></Text>
-        </Flex>
-      </View>
-      <View
         width="1119px"
-        height="981px"
+        height="912px"
         shrink="0"
         overflow="hidden"
         position="relative"
@@ -507,14 +36,14 @@ export default function DashboardNewUser(props) {
           width="464px"
           height="151px"
           position="absolute"
-          top="174px"
-          left="18px"
+          top="178px"
+          left="340px"
           overflow="hidden"
           boxShadow="0px 9.94853401184082px 12.963241577148438px rgba(0, 0, 0, 0.06515888124704361)"
           borderRadius="3px"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(255,255,255,1)"
-          {...getOverrideProps(overrides, "User Balance")}
+          {...getOverrideProps(overrides, "UserPortfolio")}
         >
           <Text
             fontFamily="Poppins"
@@ -620,6 +149,25 @@ export default function DashboardNewUser(props) {
             backgroundColor="rgba(39,79,199,1)"
             {...getOverrideProps(overrides, "SelectFieldCurrency")}
           ></SelectFieldCurrency>
+          <Text
+            fontFamily="Poppins"
+            fontSize="16px"
+            fontWeight="500"
+            color="rgba(39,79,199,1)"
+            fontStyle="italic"
+            lineHeight="18.75px"
+            textAlign="left"
+            display="flex"
+            direction="column"
+            justifyContent="flex-start"
+            position="absolute"
+            top="102.5px"
+            left="24px"
+            padding="0px 0px 0px 0px"
+            whiteSpace="pre-wrap"
+            children="Link Bank Account"
+            {...getOverrideProps(overrides, "Link Bank Account")}
+          ></Text>
         </View>
         <Flex
           gap="4px"
@@ -628,30 +176,8 @@ export default function DashboardNewUser(props) {
           left="18px"
           direction="column"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 82")}
+          {...getOverrideProps(overrides, "UserProfile")}
         >
-          <Text
-            fontFamily="Poppins"
-            fontSize="25px"
-            fontWeight="400"
-            color="rgba(0,0,0,1)"
-            fontStyle="italic"
-            lineHeight="41px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            letterSpacing="0.22px"
-            width="203px"
-            height="36px"
-            grow="1"
-            basis="36px"
-            position="relative"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Hello UserName"
-            {...getOverrideProps(overrides, "Greetings")}
-          ></Text>
           <Text
             fontFamily="Poppins"
             fontSize="14px"
@@ -676,14 +202,12 @@ export default function DashboardNewUser(props) {
           gap="16px"
           position="absolute"
           top="358px"
-          left="18px"
+          left="140px"
           direction="column"
-          width="830px"
-          height="254px"
           borderRadius="3px"
           padding="24px 0px 16px 24px"
           backgroundColor="rgba(255,255,255,1)"
-          {...getOverrideProps(overrides, "Frame 74")}
+          {...getOverrideProps(overrides, "Activity32683500")}
         >
           <Text
             fontFamily="Poppins"
@@ -703,7 +227,7 @@ export default function DashboardNewUser(props) {
             padding="0px 0px 0px 0px"
             whiteSpace="pre-wrap"
             children="Activity"
-            {...getOverrideProps(overrides, "Activity")}
+            {...getOverrideProps(overrides, "Activity32683501")}
           ></Text>
           <Flex
             gap="46px"
@@ -756,8 +280,8 @@ export default function DashboardNewUser(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="BUY"
-                {...getOverrideProps(overrides, "BUY")}
+                children="RECIEVE"
+                {...getOverrideProps(overrides, "RECIEVE")}
               ></Text>
             </Flex>
             <Text
@@ -872,8 +396,8 @@ export default function DashboardNewUser(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="SELL"
-                {...getOverrideProps(overrides, "SELL")}
+                children="SEND"
+                {...getOverrideProps(overrides, "SEND")}
               ></Text>
             </Flex>
             <Text
@@ -988,8 +512,8 @@ export default function DashboardNewUser(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="Deposit"
-                {...getOverrideProps(overrides, "Deposit")}
+                children="DEPOSIT"
+                {...getOverrideProps(overrides, "DEPOSIT")}
               ></Text>
             </Flex>
             <Text
@@ -1057,15 +581,13 @@ export default function DashboardNewUser(props) {
         <Flex
           gap="16px"
           position="absolute"
-          top="650px"
-          left="18px"
+          top="647px"
+          left="145px"
           direction="column"
-          width="830px"
-          height="254px"
           borderRadius="3px"
-          padding="24px 0px 16px 24px"
+          padding="24px 0px 0px 24px"
           backgroundColor="rgba(255,255,255,1)"
-          {...getOverrideProps(overrides, "Frame 84")}
+          {...getOverrideProps(overrides, "SwapListing")}
         >
           <Text
             fontFamily="Poppins"
@@ -1089,7 +611,6 @@ export default function DashboardNewUser(props) {
           <Flex
             gap="46px"
             width="806px"
-            height="45px"
             justifyContent="space-between"
             alignItems="center"
             shrink="0"
@@ -1243,7 +764,7 @@ export default function DashboardNewUser(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="BUY"
+                children="RECIEVE"
                 {...getOverrideProps(overrides, "Increase Value32683614")}
               ></Text>
             </Flex>
@@ -1405,7 +926,7 @@ export default function DashboardNewUser(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="Sell"
+                children="SEND"
                 {...getOverrideProps(overrides, "Increase Value32683624")}
               ></Text>
             </Flex>
@@ -1567,82 +1088,12 @@ export default function DashboardNewUser(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 whiteSpace="pre-wrap"
-                children="BUY"
+                children="RECIEVE"
                 {...getOverrideProps(overrides, "Increase Value32683634")}
               ></Text>
             </Flex>
           </Flex>
         </Flex>
-        <View
-          padding="0px 0px 0px 0px"
-          width="411px"
-          height="21px"
-          position="absolute"
-          top="936px"
-          left="369px"
-          {...getOverrideProps(overrides, "Footer")}
-        >
-          <Text
-            fontFamily="Raleway"
-            fontSize="18px"
-            fontWeight="600"
-            color="rgba(116,116,117,1)"
-            fontStyle="italic"
-            lineHeight="21.09375px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            width="190px"
-            position="absolute"
-            top="0px"
-            left="0px"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Terms and Conditions"
-            {...getOverrideProps(overrides, "Terms and Conditions")}
-          ></Text>
-          <Text
-            fontFamily="Raleway"
-            fontSize="18px"
-            fontWeight="600"
-            color="rgba(116,116,117,1)"
-            fontStyle="italic"
-            lineHeight="21.09375px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            width="58px"
-            position="absolute"
-            top="0px"
-            left="222px"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Pivacy"
-            {...getOverrideProps(overrides, "Pivacy")}
-          ></Text>
-          <Text
-            fontFamily="Raleway"
-            fontSize="18px"
-            fontWeight="600"
-            color="rgba(116,116,117,1)"
-            fontStyle="italic"
-            lineHeight="21.09375px"
-            textAlign="left"
-            display="flex"
-            direction="column"
-            justifyContent="flex-start"
-            width="97px"
-            position="absolute"
-            top="0px"
-            left="314px"
-            padding="0px 0px 0px 0px"
-            whiteSpace="pre-wrap"
-            children="Contact Us"
-            {...getOverrideProps(overrides, "Contact Us")}
-          ></Text>
-        </View>
         <View
           width="204px"
           height="39px"
@@ -1652,7 +1103,7 @@ export default function DashboardNewUser(props) {
           overflow="hidden"
           padding="0px 0px 0px 0px"
           backgroundColor="rgba(255,255,255,0)"
-          {...getOverrideProps(overrides, "progress_bar")}
+          {...getOverrideProps(overrides, "ProgressBar")}
         >
           <View
             width="204px"
@@ -1683,123 +1134,28 @@ export default function DashboardNewUser(props) {
             {...getOverrideProps(overrides, "Complete your profile")}
           ></Text>
         </View>
-        <View
-          width="1120px"
-          height="101px"
+        <Text
+          fontFamily="Poppins"
+          fontSize="25px"
+          fontWeight="400"
+          color="rgba(0,0,0,1)"
+          fontStyle="italic"
+          lineHeight="41px"
+          textAlign="left"
+          display="flex"
+          direction="column"
+          justifyContent="flex-start"
+          letterSpacing="0.22px"
+          width="203px"
+          height="1px"
           position="absolute"
-          top="0px"
-          left="-1px"
-          overflow="hidden"
+          top="64px"
+          left="18px"
           padding="0px 0px 0px 0px"
-          {...getOverrideProps(overrides, "Frame 3223")}
-        >
-          <Flex
-            gap="8px"
-            position="absolute"
-            top="37px"
-            left="226px"
-            width="406px"
-            height="48px"
-            alignItems="center"
-            borderRadius="3px"
-            padding="8px 8px 8px 8px"
-            backgroundColor="rgba(255,255,255,1)"
-            {...getOverrideProps(overrides, "Frame 26")}
-          >
-            <View
-              width="24px"
-              height="24px"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "TxbSearch")}
-            ></View>
-            <Text
-              fontFamily="Poppins"
-              fontSize="14px"
-              fontWeight="400"
-              color="rgba(174,182,207,1)"
-              fontStyle="italic"
-              lineHeight="24px"
-              textAlign="center"
-              display="flex"
-              direction="column"
-              justifyContent="flex-start"
-              letterSpacing="-0.13px"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Search"
-              {...getOverrideProps(overrides, "txtSearch")}
-            ></Text>
-          </Flex>
-          <Flex
-            gap="8px"
-            position="absolute"
-            top="37px"
-            left="885px"
-            width="183px"
-            justifyContent="flex-end"
-            alignItems="center"
-            padding="0px 0px 0px 0px"
-            {...getOverrideProps(overrides, "Frame 27")}
-          >
-            <Text
-              fontFamily="Poppins"
-              fontSize="16px"
-              fontWeight="500"
-              color="rgba(0,38,28,1)"
-              fontStyle="italic"
-              lineHeight="18.75px"
-              textAlign="left"
-              display="flex"
-              direction="column"
-              justifyContent="flex-start"
-              letterSpacing="0.11px"
-              width="111.74px"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              whiteSpace="pre-wrap"
-              children="Ebenezer"
-              {...getOverrideProps(overrides, "UserName")}
-            ></Text>
-            <Image
-              width="48px"
-              height="48px"
-              shrink="0"
-              position="relative"
-              borderRadius="12px"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "UserImage")}
-            ></Image>
-          </Flex>
-          <Flex
-            gap="11px"
-            position="absolute"
-            top="37px"
-            left="782px"
-            width="48px"
-            height="48px"
-            justifyContent="center"
-            alignItems="center"
-            boxShadow="0px 4px 16px rgba(0, 0.6000000238418579, 0.440540611743927, 0.07999999821186066)"
-            borderRadius="8px"
-            padding="8px 8px 8px 8px"
-            backgroundColor="rgba(255,255,255,1)"
-            {...getOverrideProps(overrides, "Frame 50")}
-          >
-            <View
-              width="24px"
-              height="24px"
-              shrink="0"
-              position="relative"
-              padding="0px 0px 0px 0px"
-              {...getOverrideProps(overrides, "Icons")}
-            ></View>
-          </Flex>
-        </View>
+          whiteSpace="pre-wrap"
+          children={`${"Hello "}${authAttributes["given_name"]}`}
+          {...getOverrideProps(overrides, "Greetings")}
+        ></Text>
       </View>
     </Flex>
   );
