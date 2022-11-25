@@ -1,14 +1,16 @@
 import React, {useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Auth } from 'aws-amplify'
+import { Auth, Hub } from 'aws-amplify'
 import useStore from '../context/userState.js'
 import MainSidebar from '../components/shared/MainSidebar.js'
 import { Header, DashboardNewUser, Footer } from "../ui-components"
 import "../components/others/newDashContainer.css"
+import axios from 'axios'
 
 
 function NewDash() {
-  const navigate = useNavigate();
+  
+  const navigate = useNavigate()
   const signOut = () => {
     Auth.signOut()
     .then(userObject == false ? navigate('/signin') : '')
@@ -17,12 +19,23 @@ function NewDash() {
   const {userObject, loading, fetchUser} = useStore()
 
   useEffect(()=>{
-    (async() => await fetchUser())();
+    (async() => {
+      await fetchUser()
+
+    })();
 
     // (async() => {
     //   if (userObject !== null && userObject !== ''){
     //     const response = await Auth.currentAuthenticatedUser();  //Total Info
     //     return console.log(response)
+    //   }
+    // })()
+    // console.log(userObject)
+    // console.log(userObject[6]['Value'])
+
+    // (()=>{
+    //   if (userObject !== ''){
+
     //   }
     // })()
 

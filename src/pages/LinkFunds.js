@@ -37,7 +37,9 @@ function LinkFunds() {
           </div>
 
           <div className="ContainerComboContent">
-            <DashboardLinkFunds overrides={{"SubmitAccountType": { onClick: () => MonoConnects.open() }
+            <DashboardLinkFunds overrides={{
+              "SubmitAccountType": { onClick: () => MonoConnects.open() },
+              "SelectCountry": { options: ['USA', 'Nigeria'] }
             }}/>
           </div>
 
