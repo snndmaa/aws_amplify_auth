@@ -21,6 +21,29 @@ function NewDash() {
   useEffect(()=>{
     (async() => {
       await fetchUser()
+      Auth.currentAuthenticatedUser()
+      .then(() => {
+        const amount_text = document.getElementsByClassName('amplify-text')[1]
+        console.log(amount_text)
+        amount_text.innerText = 'dfd'
+      })
+      // .then(async (user) => {
+      //   await axios.post(`http://localhost:5000/v1/wallet/${user.attributes.email}`)
+      //   // .then((res) => console.log(res.data))
+      //   .then(async (res) => {
+      //     console.log(res.data.data)
+      //     await axios.post(`http://localhost:5000/v1/wallet/zzz`, {
+      //       "publicKey": res.data.data.publicKey,
+      //       "secretKey": res.data.data.secretKey,
+      //       "asset_code": "TEST",
+      //       "asset_issuer": "GC6NGB45CEQD76LLBSUBPSEURF45NNG4QU6EK3HYWQ3PFGVFS6CQEF2H"
+      //     })
+      //     .then(response => console.log(response.data.data[0].balance))
+      //     .catch((error) => console.log(error.response.data))
+      //   })
+
+      // })
+      // .catch((error) => console.log(error.response.data))
 
     })();
 
@@ -59,7 +82,10 @@ function NewDash() {
           </div>
 
           <div className="ContainerComboContent">
-            <DashboardNewUser/>
+            <DashboardNewUser overrides={{
+              // 'Title32674910': { onClick: (e)=> console.log(e) }
+              
+              }}/>
           </div>
 
         </div>
